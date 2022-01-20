@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'weather_infomation',
     'rest_framework',
     'today_homepage.apps.TodayHomepageConfig'
 ]
@@ -81,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'today',
         'USER': 'admin',
-        'PASSWORD': '000000000',  # DB 비밀 번호 각각 설정되어 있는 비밀번호로 바꾸고 나중에 일률적으로 실행할것
+        'PASSWORD': '0000000000'  # DB 비밀 번호 각각 설정되어 있는 비밀번호로 바꾸고 나중에 일률적으로 실행할것
         'HOST': 'localhost',
         'PORT': '3306'
     }
