@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'today_homepage.apps.TodayHomepageConfig',
     'rest_framework',
-    'today_homepage.apps.TodayHomepageConfig'
+    'weather_api'
+
 ]
 
 MIDDLEWARE = [
@@ -81,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', #1
         'NAME': 'todayweather', #2
         'USER': 'root', #3                      
-        'PASSWORD': '_______',  #4          
+        'PASSWORD': '__________',  #4          
         'HOST': 'localhost',   #5                
         'PORT': '3306', #6
     }
