@@ -9,7 +9,7 @@ import pandas as pd
 # //*[@id="mw-content-text"]/div[1]/table[6]
 # //*[@id="mw-content-text"]/div[1]/table[6]/tbody
 url = "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
-driver = webdriver.Chrome('/home/imsky/문서/weather_api/today_weather/chromedriver')
+driver = webdriver.Chrome('/home/imsky/문서/today_project/today_backend/weather/weather_infomation/chromedriver')
 driver.get(url)
 
 def html_source():
@@ -37,6 +37,7 @@ def bs4_source():
     # table 생성 
     table = parser_functions.make2d(data)
     make_table = pd.DataFrame(data=table[1:], columns=table[0])
+    print(make_table)
     make_table.to_csv('city_table.csv', index=False, index_label=False)
 
         

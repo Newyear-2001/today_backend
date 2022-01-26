@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'weather_infomation',
     'rest_framework',
-    'today_homepage.apps.TodayHomepageConfig'
+    'today_homepage.apps.TodayHomepageConfig',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'weather.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'today',
         'USER': 'admin',
-        'PASSWORD': '0000000000'  # DB 비밀 번호 각각 설정되어 있는 비밀번호로 바꾸고 나중에 일률적으로 실행할것
+        'PASSWORD': '0000000',  # DB 설정되어 있는 비밀번호로 바꾸고 나중에 일률적으로 실행할것
         'HOST': 'localhost',
         'PORT': '3306'
     }
